@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-image:linear-gradient(90deg, #02595054,#03a69685, #96d9cc79), (url(../_img/overlay.png), url(../_img/bg.jpg));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.socialvolley-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+
+    .socialvolley-phone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        .mobile-1{
+            height: 28rem;
+            margin-right: -95px;
+            margin-bottom: 150px;
+        }
+
+        .mobile-2{
+            height: 30rem;
+            z-index: 2;
+        }
+    }
+
+    .socialvolley-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 50%;
+        min-height: 34rem;
+        margin: 0 50px;
+
+        .group{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(248, 248, 248);
+            width: 100%;
+            padding: 1.3rem 0;
+            border: 2px solid #025951;
+            border-radius: 5px;
+
+            &:nth-child(1){
+                min-height: 19rem;
+            }
+
+            &:nth-child(2){
+                margin-top: 30px;
+            }
+
+            .social-logo{
+                font-family: 'Righteous', cursive;
+                font-size: 2.5em;
+                color: #025951;
+                letter-spacing: 0.1em;
+                margin-bottom: 15px;
+            }
+
+            .profile-photo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 3px solid #025951;
+                margin-bottom: 15px;
+
+                img{
+                    width: 120px;
+                    height: 120px;
+                    object-fit: cover;
+                }
+            }
+
+            .social-login{
+                background-color: #025951;
+                color: white;
+                padding: 8px;
+                border-radius: 4px;
+                transition: 0.5s;
+
+                &:hover{
+                    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                }
+            }
+
+            .social-logout{
+                color: #025951;
+                margin-top: 1rem;
+                transition: 0.5s;
+
+                &:hover{
+                    color:#0D0D0D;
+                }
+            }
+        }
+
+        .not-account{
+            color: rgb(122, 122, 122);
+
+            .link-blue{
+                color: #025951;
+                transition: 0.5s;
+
+                &:hover{
+                    color:#0D0D0D;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .get-the-app{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1.3rem 0;
+            margin-top: 15px;
+
+            .get-app{
+                color: #0D0D0D;
+                border-bottom: 2px solid #0D0D0D;
+            }
+
+            .download{
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 1rem;
+
+                .app-download{
+                    height: 3rem;
+                    width: 10rem;
+                    background-size: cover;
+
+                    &:nth-child(1){
+                        background-image: url(../_img/apple.png);
+                    }
+
+                    &:nth-child(2){
+                        background-image: url(../_img/google-play.png);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*media requires*/
+
+@media screen and (max-width:1024px){
+    .socialvolley-wrapper{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:767px){
+    
+    .socialvolley-wrapper{
+        width: 90% !important;
+    }
+
+    .socialvolley-phone{
+        display: none !important;
+    }
+
+    .socialvolley-info{
+        width: 100% !important;
+    }
+}
